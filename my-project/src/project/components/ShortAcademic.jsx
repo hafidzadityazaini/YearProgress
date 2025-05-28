@@ -1,34 +1,39 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import tahfizhImg from "../../assets/tahfizh.jpg";
+import itImg from "../../assets/it.jpg";
+import diniyyahImg from "../../assets/diniyyah.jpg";
+import umumImg from "../../assets/ss4.png";
 
 const cardData = [
   {
     category: "Tahfizh",
     title: "Perkembangan Hafalan Santri",
     description:
-      "Pantau perkembangan hafalan Quran siswa dari minggu ke minggu secara sistematis.",
-    image: "/images/tahfizh.jpg",
+      "Pantau perkembangan hafalan Quran siswa selama setahun secara sistematis.",
+    image: tahfizhImg,
   },
   {
     category: "IT",
     title: "Proyek Aplikasi Siswa",
     description:
       "Dokumentasi progres siswa dalam mengembangkan aplikasi berbasis web & mobile.",
-    image: "/images/it.jpg",
+    image: itImg,
   },
   {
     category: "Diniyyah",
-    title: "Kegiatan Kajian Kitab",
+    title: "Mempelajari ilmu Agama",
     description:
-      "Progres pembelajaran kitab-kitab klasik oleh siswa dalam program diniyyah.",
-    image: "/images/diniyyah.jpg",
+      "Progres pembelajaran Ilmu Syariah, Bahasa Arab, Ilmu Alat selama setahun penuh.",
+    image: diniyyahImg,
   },
   {
     category: "Umum",
-    title: "Kegiatan Harian dan Umum",
+    title: "Pembelajaran Umum",
     description:
-      "Laporan kegiatan umum siswa seperti kebersihan, kedisiplinan, dan keterlibatan sosial.",
-    image: "/images/umum.jpg",
+      "Laporan Pembelajaran Ips, Ipa, Bahasa Inggris, dan Bahasa Indonesia, dan Matematika selama setahun.",
+    image: umumImg,
   },
 ];
 
@@ -79,8 +84,8 @@ const AcademicProgress = () => {
                 {card.title}
               </h5>
               <p className="mb-4 text-gray-700">{card.description}</p>
-              <a
-                href="#"
+              <Link
+                to="/academic"
                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 transition"
               >
                 Pelajari Lebih Lanjut
@@ -98,20 +103,26 @@ const AcademicProgress = () => {
                     d="M5 12h14M12 5l7 7-7 7"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </motion.div>
         ))}
       </div>
 
-      <div className="mt-16 text-center">
-        <a
-          href="#"
+      <motion.div
+        className="mt-16 text-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <Link
+          to="/academic"
           className="inline-block px-6 py-3 bg-indigo-600 text-white text-lg font-medium rounded-lg hover:bg-indigo-700 transition"
         >
           Pelajari Lebih Lanjut
-        </a>
-      </div>
+        </Link>
+      </motion.div>
     </section>
   );
 };

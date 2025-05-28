@@ -1,5 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import futsalImg from "../../assets/futsal.jpg";
+import taekwondoImg from "../../assets/taekwondo.jpg";
+import panahanImg from "../../assets/panahan.jpg";
+import renangImg from "../../assets/renang.jpg";
+
 
 const ekskulData = [
   {
@@ -7,30 +12,31 @@ const ekskulData = [
     title: "Latihan & Turnamen Futsal",
     description:
       "Progres siswa dalam latihan rutin dan partisipasi dalam turnamen futsal tingkat sekolah dan kota.",
-    image: "/images/futsal.jpg",
+    image: futsalImg,
   },
   {
     category: "Taekwondo",
     title: "Ujian Kenaikan Tingkat",
     description:
       "Dokumentasi kegiatan ujian sabuk dan keikutsertaan dalam kejuaraan taekwondo regional.",
-    image: "/images/taekwondo.jpg",
+    image: taekwondoImg,
   },
   {
     category: "Panahan",
     title: "Teknik & Ketepatan",
     description:
       "Pemantauan keterampilan panahan siswa dari teknik dasar hingga peningkatan akurasi.",
-    image: "/images/panahan.jpg",
+    image: panahanImg,
   },
   {
     category: "Renang",
     title: "Progres Gaya dan Ketahanan",
     description:
       "Progres siswa dalam menguasai berbagai gaya renang dan peningkatan daya tahan.",
-    image: "/images/renang.jpg",
+    image: renangImg,
   },
 ];
+
 
 const EkstrakurikulerProgress = () => {
   return (
